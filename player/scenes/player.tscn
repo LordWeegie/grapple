@@ -23,6 +23,9 @@ size = Vector2(128, 128)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1492025989]
 script = ExtResource("1_t0cpu")
+walking_speed = 350
+running_speed = 700
+jump_velocity = -1500.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=706840528]
 sprite_frames = SubResource("SpriteFrames_5ukoj")
@@ -31,3 +34,6 @@ sprite_frames = SubResource("SpriteFrames_5ukoj")
 shape = SubResource("RectangleShape2D_5ukoj")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2125478826]
+zoom = Vector2(0.5, 0.5)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0

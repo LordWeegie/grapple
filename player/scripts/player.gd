@@ -24,6 +24,10 @@ func movement(delta):
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jump_velocity
 
+	if Input.is_action_just_released("jump") and velocity.y < 0:
+		velocity.y = -200
+
+
 	# Sprinting system
 	if Input.is_action_pressed("sprint"):
 		active_speed = running_speed
